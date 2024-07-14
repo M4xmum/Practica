@@ -23,7 +23,15 @@ public:
 
 int main() {
 	setlocale(LC_ALL, "Rus");
-	string s = "bcabc";
+	string s = "";
+	cout << "¬ведите строку, в которой надо убрать повтор€ющиес€ символы(1 <= длина строки <= 10^4): ";
+	while (1) {
+		cin >> s;
+		if (s.size() >= 1 && s.size() <= 10000)
+			break;
+		else
+			cout << "»гнорированы услови€ ввода! ¬ведите строку, в которой надо убрать повтор€ющиес€ символы: ";
+	}
 	Solution r;
 	cout << r.removeDuplicateLetters(s) << endl;
 
